@@ -39,7 +39,7 @@ let signup = new Subscriber ({
   date: new Date(),
   ip: ip
 })
-signup.save().then(res.redirect('https://registration.bitninja.io/?flag=blackfriday&email='+ queryEmail))
+signup.save().then(res.redirect(process.env.TARGET + queryEmail))
 
 })
 
